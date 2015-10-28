@@ -9,6 +9,10 @@ body {
 	padding: 30px;
 }
 
+// color varibales
+
+$maincolor: #414042;
+
 // Fonts
 @font-face {
 	font-family: 'Odudo-Light';
@@ -97,6 +101,7 @@ p {
 	.header {
 		@include outer-container();
 		@include span-columns(2);
+		height: 100%;
 
 		.logo {
 			width: 100%;
@@ -104,12 +109,15 @@ p {
 
 		.navlinks {
 			font-family: $fontxl;
+			border-top: 5px solid $maincolor;
+    	padding-top: 17px;
+    	margin-top: 30px;
 		}
 
 		a {
 			appearance: none;
 			text-decoration: none;
-			color: #414042;
+			color: $maincolor;
 			font-size: 1.5em;
 		}
 
@@ -117,3 +125,8 @@ p {
 			float: right;
 		}
 	}
+
+section {
+	@include outer-container();
+	@include span-columns(10);
+}
