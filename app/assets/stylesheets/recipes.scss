@@ -1,3 +1,65 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Fonts
+@font-face {
+	font-family: 'Odudo-Light';
+	src: url('odudo-light.eot');
+	src: url('odudo-light.eot?#iefix') format('embedded-opentype'),
+         url('odudo-light.woff2') format('woff2'),
+	     url('odudo-light.woff') format('woff'),
+	     url('odudo-light.ttf') format('truetype'),
+	     url('odudo-light.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Odudo-Regular';
+	src: url('odudo.eot');
+	src: url('odudo.eot?#iefix') format('embedded-opentype'),
+         url('odudo.woff2') format('woff2'),
+	     url('odudo.woff') format('woff'),
+	     url('odudo.ttf') format('truetype'),
+	     url('odudo.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Odudo-SemiBold';
+	src: url('odudo-semi-bold.eot');
+	src: url('odudo-semi-bold.eot?#iefix') format('embedded-opentype'),
+         url('odudo-semi-bold.woff2') format('woff2'),
+	     url('odudo-semi-bold.woff') format('woff'),
+	     url('odudo-semi-bold.ttf') format('truetype'),
+	     url('odudo-semi-bold.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Odudo-Bold';
+	src: url('odudo-bold.eot');
+	src: url('odudo-bold.eot?#iefix') format('embedded-opentype'),
+         url('odudo-bold.woff2') format('woff2'),
+	     url('odudo-bold.woff') format('woff'),
+	     url('odudo-bold.ttf') format('truetype'),
+	     url('odudo-bold.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Font Variables
+
+$fontsm: 'Odudo-Light';
+$fontm: 'Odudo-Regular';
+$fontl: 'Odudo-SemiBold';
+$fontxl: 'Odudo-Bold';
+
+// H Tags
+
+h1 {
+	font-family: $fontxl;
+}
