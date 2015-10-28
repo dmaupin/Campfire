@@ -75,6 +75,12 @@ h1 {
 	font-family: $fontxl;
 }
 
+h2 {
+	font-family: $fontxl;
+	color: $maincolor;
+	font-size: 5.5em;
+}
+
 p {
 	font-family: $fontsm;
 }
@@ -126,7 +132,24 @@ p {
 		}
 	}
 
-section {
-	@include outer-container();
-	@include span-columns(10);
-}
+	// recipes
+
+	.recipes {
+		@include outer-container();
+		@include span-columns(9);
+		padding-left: 30px;
+
+		h2 {
+			line-height: 0.9;
+			margin-bottom: 0px;
+		}
+	}
+
+	.intro {
+		border-bottom: 5px solid $maincolor;
+		border-top: 5px solid $maincolor;
+		margin-top: 234px;
+		padding-bottom: 60px;
+	}
+
+section {}
