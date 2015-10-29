@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
 	def update
 		@recipe = Recipe.find(params[:id])
 
-		if @recipe.update_attributes(params.require(:recipe).permit(:title, :description, :steps, :img))
+		if @recipe.update_attributes(params.require(:recipe).permit(:title, :description, :steps, :img, ingredients_attributes: [:id, :item]))
 			redirect_to recipes_path
 		else
 			render "edit"
@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-		@recipe = Recipe.new(params.require(:recipe).permit(:title, :description, :steps, :img))
+		@recipe = Recipe.new(params.require(:recipe).permit(:title, :description, :steps, :img, ingredients_attributes: [:id, :item]))
 
 		if @recipe.save
 			redirect_to recipes_path

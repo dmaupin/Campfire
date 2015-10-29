@@ -175,6 +175,10 @@ p {
 article {
 	border-bottom: 5px solid $accentcolor;
 	padding-bottom: 60px;
+
+	h2 {
+		font-size: 4em;
+	}
 }
 
 form {
