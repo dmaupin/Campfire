@@ -8,11 +8,17 @@
 <% @recipes.each do |p| %>
 	<article>
 		<h3>Recipe</h3>
-		<h2><%= p.title.upcase %></h2><br>
+		<h2><%= p.title %></h2><br>
 		<%= image_tag p.img.url %>
-		<p><span><%= p.description %></span></p>
+		<p><span><%= p.description.html_safe %></span></p>
 		<h3>The Steps:</h3>
 		<p><%= p.steps %></p>
+			<h3>The Ingredients:</h3>
+				<ul>
+					<% for ingredients in p.ingredients %>
+  				<li><%=h ingredients.item %></li>
+  			</ul>
+			<% end %>
 	</article>
 <% end %>
 
