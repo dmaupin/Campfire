@@ -1,14 +1,15 @@
 <div class="recipes">
 
 	<div class="intro">
-		<h2>Welcome to<br>Campfire Cookery.</h2>
+		<h2>Welcome to<br/>Campfire Cookery.</h2>
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 	</div>
 
 <% @recipes.each do |p| %>
+
 	<article>
 		<h3>Recipe</h3>
-		<h2><%= p.title %></h2><br>
+		<h2><%= p.title %></h2><br/>
 		<%= image_tag p.img.url %>
 		<p><span><%= p.description.html_safe %></span></p>
 		<h3>The Steps:</h3>
@@ -22,10 +23,11 @@
 		<% end %>
 		<!-- Admin Links -->
 		<% if current_user %>
-			<p><%= link_to 'REVISE', edit_recipe_path(@recipe)%></p>
-			<p><%= link_to "DELETE", @recipe, method: :delete, data: { confirm: "Are you sure?"}%></p>
+			<p><%= link_to 'REVISE', edit_recipe_path(p)%></p>
+			<p><%= link_to "DELETE", p, method: :delete, data: { confirm: "Are you sure?"} %></p>
 		<% end %>
 	</article>
+
 <% end %>
 
 </div>
