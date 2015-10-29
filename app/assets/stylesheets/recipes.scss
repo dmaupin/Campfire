@@ -9,6 +9,7 @@ body {
 	padding: 30px;
 	max-width: 1280px;
 	background-color: #EBEDE7;
+	margin: 0 auto;
 }
 
 // color varibales
@@ -81,7 +82,7 @@ h1 {
 h2 {
 	font-family: $fontxl;
 	color: $maincolor;
-	font-size: 5.5em;
+	font-size: 4.5em;
 }
 
 h3 {
@@ -176,9 +177,9 @@ article {
 	border-bottom: 5px solid $accentcolor;
 	padding-bottom: 60px;
 
-	h2 {
-		font-size: 4em;
-	}
+	// h2 {
+	// 	font-size: 4em;
+	// }
 }
 
 form {

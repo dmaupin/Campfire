@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 	def index
-		@recipes = Recipe.all.order(created_at: :desc)
+		@recipes = Recipe.all
 	end
 
 	def show
@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
 
 	def new
 		@recipe = Recipe.new
-		5.times { @recipe.ingredients.build }
+		15.times { @recipe.ingredients.build }
 	end
 
 	def create
@@ -37,7 +37,9 @@ class RecipesController < ApplicationController
 	end
 
 	def destroy
-		
+		@recipe = Recipe.find(params[:id])
+		@recipe.destroy
+		redirect_to recipes_path
 	end
 
 end
