@@ -6,12 +6,13 @@
 	</div>
 
 <% @recipes.each do |p| %>
-	<section>
+	<article>
 		<h2><%= p.title %></h2>
-		<p><%= p.description %></p><br>
+		<p><%= p.description %></p>
+		<h3>The Steps:</h3>
 		<p><%= p.steps %></p>
 		<%= image_tag p.img.url %>
-	</section>
+	</article>
 <% end %>
 
 </div>
