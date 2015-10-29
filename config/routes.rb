@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'recipes#index'
+  resources :users
+  resources :sessions
   resources :recipes
+
+  root to: 'recipes#index'
 end
