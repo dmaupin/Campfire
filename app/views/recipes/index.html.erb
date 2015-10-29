@@ -14,12 +14,16 @@
 		<h3>The Steps:</h3>
 		<p><%= p.steps %></p>
 		<!-- Ingredients -->
-		<h3>The Ingredients:</h3>
-				
+		<h3>The Ingredients:</h3>				
 		<% for ingredients in p.ingredients %>
   		<ul>
   			<li><%=h ingredients.item %></li>
   		</ul>
+		<% end %>
+		<!-- Admin Links -->
+		<% if current_user %>
+			<p><%= link_to 'REVISE' %></p>
+			<p><%= link_to "DELETE" %></p>
 		<% end %>
 	</article>
 <% end %>
