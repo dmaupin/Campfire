@@ -1,12 +1,19 @@
 <div class="recipes">
 
 	<div class="intro">
-		<h2>Welcome to<br>campfire cookery.</h2>
+		<h2>Welcome to<br>Campfire Cookery.</h2>
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 	</div>
 
-	<section>
-		
-	</section>
+<% @recipes.each do |p| %>
+	<article>
+		<h3>Recipe</h3>
+		<h2><%= p.title.upcase %></h2><br>
+		<%= image_tag p.img.url %>
+		<p><span><%= p.description %></span></p>
+		<h3>The Steps:</h3>
+		<p><%= p.steps %></p>
+	</article>
+<% end %>
 
 </div>

@@ -7,11 +7,14 @@
 body {
 	font-size: 100%;
 	padding: 30px;
+	max-width: 1280px;
+	background-color: #EBEDE7;
 }
 
 // color varibales
 
-$maincolor: #414042;
+$maincolor: #475531;
+$accentcolor: #414042;
 
 // Fonts
 @font-face {
@@ -81,8 +84,14 @@ h2 {
 	font-size: 5.5em;
 }
 
+h3 {
+	font-family: $fontl;
+	color: $maincolor;
+}
+
 p {
 	font-family: $fontsm;
+	color: $accentcolor;
 }
 
 // Grain Overlay
@@ -98,6 +107,7 @@ p {
   z-index: 99;
   opacity: 0.1;
   pointer-events: none;
+  position: fixed;
 }
 
 // Sections
@@ -108,6 +118,9 @@ p {
 		@include outer-container();
 		@include span-columns(2);
 		height: 100%;
+		position: fixed;
+		max-width: 180px;
+		min-width: 180px;
 
 		.logo {
 			width: 100%;
@@ -115,7 +128,7 @@ p {
 
 		.navlinks {
 			font-family: $fontxl;
-			border-top: 5px solid $maincolor;
+			border-top: 5px solid $accentcolor;
     	padding-top: 17px;
     	margin-top: 30px;
 		}
@@ -123,7 +136,7 @@ p {
 		a {
 			appearance: none;
 			text-decoration: none;
-			color: $maincolor;
+			color: $accentcolor;
 			font-size: 1.5em;
 		}
 
@@ -138,18 +151,28 @@ p {
 		@include outer-container();
 		@include span-columns(9);
 		padding-left: 30px;
+		overflow: scroll;
+		margin-left: 210px;
+		max-width: 800px;
 
 		h2 {
 			line-height: 0.9;
 			margin-bottom: 0px;
 		}
+
+		span {
+			font-family: $fontm;
+		}
 	}
 
 	.intro {
-		border-bottom: 5px solid $maincolor;
-		border-top: 5px solid $maincolor;
-		margin-top: 234px;
+		border-bottom: 5px solid $accentcolor;
+		border-top: 5px solid $accentcolor;
+		margin-top: 238px;
 		padding-bottom: 60px;
 	}
 
-section {}
+article {
+	border-bottom: 5px solid $accentcolor;
+	padding-bottom: 60px;
+}
