@@ -1,8 +1,5 @@
-<%= form_for @recipe do |f| %>
-	Title : <%= f.text_field :title %>
-	Description : <%= f.text_field :description %>
-	Steps : <%= f.text_field :steps %>
-	Photo : <%= f.file_field :img %>
+<%= render partial: 'form' %>
 
-	<%= f.submit "Add" %>
-<% end %>
+<br/>
+
+<%= link_to "Delete", :recipe, method: :delete, data: {confirm: "Are you sure? This action cannot be undone."} %>

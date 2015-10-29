@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 	def index
-		@recipes = Recipe.all.order(created_at: :desc)
+		@recipes = Recipe.all
 	end
 
 	def show
@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
 	def update
 		@recipe = Recipe.find(params[:id])
 
-		if @recipe.update_attributes(params.require(:recipe).permit(:title, :description, :steps, :img))
+		if @recipe.update_attributes(params.require(:recipe).permit(:title, :description, :steps, :img, ingredients_attributes: [:id, :_destroy, :item]))
 			redirect_to recipes_path
 		else
 			render "edit"
@@ -23,10 +23,11 @@ class RecipesController < ApplicationController
 
 	def new
 		@recipe = Recipe.new
+		15.times { @recipe.ingredients.build }
 	end
 
 	def create
-		@recipe = Recipe.new(params.require(:recipe).permit(:title, :description, :steps, :img))
+		@recipe = Recipe.new(params.require(:recipe).permit(:title, :description, :steps, :img, ingredients_attributes: [:id, :_destroy, :item]))
 
 		if @recipe.save
 			redirect_to recipes_path
@@ -36,7 +37,9 @@ class RecipesController < ApplicationController
 	end
 
 	def destroy
-		
+		@recipe = Recipe.find(params[:id])
+		@recipe.destroy
+		redirect_to recipes_path
 	end
 
 end

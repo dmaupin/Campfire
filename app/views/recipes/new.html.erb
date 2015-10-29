@@ -1,8 +1,1 @@
-<%= form_for @recipe do |f| %>
-	Title : <%= f.text_field :title %>
-	Description : <%= f.text_field :description %>
-	Steps : <%= f.text_field :steps %>
-	Photo : <%= f.file_field :img %>
-
-	<%= f.submit "Add" %>
-<% end %>
+<%= render partial: 'form' %>
