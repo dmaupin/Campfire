@@ -13,12 +13,14 @@
 		<p><span><%= p.description.html_safe %></span></p>
 		<h3>The Steps:</h3>
 		<p><%= p.steps %></p>
-			<h3>The Ingredients:</h3>
-				<ul>
-					<% for ingredients in p.ingredients %>
-  				<li><%=h ingredients.item %></li>
-  			</ul>
-			<% end %>
+		<!-- Ingredients -->
+		<h3>The Ingredients:</h3>
+				
+		<% for ingredients in p.ingredients %>
+  		<ul>
+  			<li><%=h ingredients.item %></li>
+  		</ul>
+		<% end %>
 	</article>
 <% end %>
 

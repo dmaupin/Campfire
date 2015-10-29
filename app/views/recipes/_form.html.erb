@@ -12,10 +12,13 @@
 	Photo : <%= f.file_field :img %>
 	<br>
 
-	
+	<div class="fields">
 		<%= f.fields_for :ingredients do |builder| %>
-		<%= builder.label :item, "Ingredient" %><br>
-		<%= builder.text_field :item %><br>
+			<%= builder.label :item, "Ingredient" %><br/>
+			<%= builder.text_field :item %><br/>
+			<%= builder.check_box :_destroy %>
+			<%= builder.label :_destroy, "Remove" %><br/><br/>
 		<% end %>
 	<%= f.submit "Submit" %>
+	</div>
 <% end %>
