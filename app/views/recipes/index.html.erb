@@ -22,8 +22,8 @@
 		<% end %>
 		<!-- Admin Links -->
 		<% if current_user %>
-			<p><%= link_to 'REVISE' %></p>
-			<p><%= link_to "DELETE" %></p>
+			<p><%= link_to 'REVISE', edit_recipe_path(@recipe)%></p>
+			<p><%= link_to "DELETE", @recipe, method: :delete, data: { confirm: "Are you sure?"}%></p>
 		<% end %>
 	</article>
 <% end %>
