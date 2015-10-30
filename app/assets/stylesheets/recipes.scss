@@ -15,7 +15,7 @@ body {
 // color varibales
 
 $maincolor: #4D5147;
-$accentcolor: #231F20;
+$accentcolor: #353734;
 
 // Fonts
 @font-face {
@@ -182,6 +182,26 @@ p {
 		border-top: 7px solid $accentcolor;
 		margin-top: 259px;
 		padding-bottom: 60px;
+	}
+
+	.footer {
+		@include outer-container();
+		@include span-columns(9);
+		width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 60px solid $accentcolor;
+
+    span {
+    	float: left;
+    }
+
+   	a {
+			appearance: none;
+			text-decoration: none;
+			color: $accentcolor;
+			cursor: pointer;
+		}
 	}
 
 article {
