@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  root to: 'recipes#index'
+  resources :users
+  resources :sessions
+
+  get '/logout' => 'sessions#destroy'
+
   resources :recipes
+
+  root to: 'recipes#index'
 end

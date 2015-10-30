@@ -13,6 +13,18 @@
 	<div class="navlinks">
 		<a href="/">Home</a>
 		<span><a href="/">Info</a></span>
+		<% if current_user %>
+		<br/>
+		<a><%= link_to "New", new_recipe_path, class: 'new' %></a>
+		<% end %>
+		<br/>
+		<% if current_user %>
+			<p>Logged in as Admin<br/>
+			<%= link_to "Log Out", '/logout' %>
+			</p>	
+		<% else %>
+			<p><%= link_to "Admin", new_session_path %></p>			
+		<% end %>
 	</div>
 </div>
 

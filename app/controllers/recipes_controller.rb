@@ -1,4 +1,8 @@
 class RecipesController < ApplicationController
+
+	# Very Basic HTML Auth
+	# http_basic_authenticate_with name: "admin", password: "foobar", except: :index
+
 	def index
 		@recipes = Recipe.all
 	end
