@@ -14,8 +14,8 @@ body {
 
 // color varibales
 
-$maincolor: #475531;
-$accentcolor: #414042;
+$maincolor: #4D5147;
+$accentcolor: #231F20;
 
 // Fonts
 @font-face {
@@ -87,7 +87,8 @@ h2 {
 
 h3 {
 	font-family: $fontl;
-	color: $maincolor;
+	font-size: 1em;
+	color: $accentcolor;
 }
 
 p {
@@ -129,7 +130,7 @@ p {
 
 		.navlinks {
 			font-family: $fontxl;
-			border-top: 5px solid $accentcolor;
+			border-top: 7px solid $accentcolor;
     	padding-top: 17px;
     	margin-top: 30px;
 		}
@@ -177,9 +178,9 @@ p {
 	}
 
 	.intro {
-		border-bottom: 5px solid $accentcolor;
-		border-top: 5px solid $accentcolor;
-		margin-top: 238px;
+		border-bottom: 7px solid $accentcolor;
+		border-top: 7px solid $accentcolor;
+		margin-top: 259px;
 		padding-bottom: 60px;
 	}
 
