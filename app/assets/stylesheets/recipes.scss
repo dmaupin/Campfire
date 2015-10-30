@@ -206,3 +206,17 @@ ul {
 	font-family: $fontm;
 	color: $accentcolor;
 }
+
+.bug {
+	max-width: 40px;
+}
+
+.adminlinks a {
+	appearance: none;
+	text-decoration: none;
+	font-family: $fontl;
+	color: $maincolor;
+	font-size: 1.1em;
+	cursor: pointer;
+	text-transform: uppercase;
+}

@@ -2,29 +2,33 @@
 
 	<div class="intro">
 		<h2>Welcome to<br/>Campfire Cookery.</h2>
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><img src="<%= asset_path('icon.svg') %>" class="bug">
 	</div>
 
-<% @recipes.each do |p| %>
+<% @recipes.each do |r| %>
 
 	<article>
 		<h3>Recipe</h3>
-		<h2><%= p.title %></h2><br/>
-		<%= image_tag p.img.url %>
-		<p><span><%= p.description.html_safe %></span></p>
+		<h2><%= r.title %></h2><br/>
+		<%= image_tag r.img.url %>
+		<p><span><%= r.description.html_safe %></span></p>
+		<img src="<%= asset_path('icon.svg') %>" class="bug">
 		<h3>The Steps:</h3>
-		<p><%= p.steps %></p>
+		<p><%= r.steps %></p>
 		<!-- Ingredients -->
 		<h3>The Ingredients:</h3>				
-		<% for ingredients in p.ingredients %>
+		<% for ingredients in r.ingredients %>
   		<ul>
   			<li><%=h ingredients.item %></li>
   		</ul>
 		<% end %>
 		<!-- Admin Links -->
-		<% if current_user %>
-			<p><%= link_to 'REVISE', edit_recipe_path(p)%></p>
-			<p><%= link_to "DELETE", p, method: :delete, data: { confirm: "Are you sure?"} %></p>
+		<% if current_user %><br/>
+			<div class="adminlinks">
+				<p>Admin Tools : </p>
+				<%= link_to 'Edit', edit_recipe_path(r)%> | 
+				<%= link_to "Delete", r, method: :delete, data: { confirm: "Are you sure?"} %>
+			</div>
 		<% end %>
 	</article>
 
