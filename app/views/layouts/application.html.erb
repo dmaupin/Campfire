@@ -13,7 +13,7 @@
 	<img src="<%= asset_path('Campfire_Logo_3a.svg') %>" alt="Campfire Cookery" class="logo">
 	<div class="navlinks">
 		<a id="home">Top</a>
-		<span><a href="/">Info</a></span>
+		<span><a id="infobtn">Info</a></span>
 		<% if current_user %>
 		<br/>
 		<a><%= link_to "New", new_recipe_path, class: 'new' %></a>

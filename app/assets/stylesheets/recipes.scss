@@ -8,14 +8,15 @@ body {
 	font-size: 100%;
 	padding: 30px;
 	max-width: 1280px;
-	background-color: #EBEDE7;
+	background-color: #DFE8DF;
 	margin: 0 auto;
 }
 
 // color varibales
 
 $maincolor: #4D5147;
-$accentcolor: #353734;
+$accentcolor: #666A65;
+$accenttwo: #ffffff;
 
 // Fonts
 @font-face {
@@ -130,16 +131,19 @@ p {
 
 		.navlinks {
 			font-family: $fontxl;
-			border-top: 7px solid $accentcolor;
-    	padding-top: 17px;
-    	margin-top: 30px;
+			border-top: 7px solid $accenttwo;
+    	padding-top: 20px;
+    	margin-top: 20px;
 		}
 
 		a {
 			appearance: none;
 			text-decoration: none;
 			color: $accentcolor;
-			font-size: 1.5em;
+	    font-size: 1.2em;
+	    text-transform: uppercase;
+	    letter-spacing: 1px;
+
 		}
 
 		.new {
@@ -178,9 +182,9 @@ p {
 	}
 
 	.intro {
-		border-bottom: 7px solid $accentcolor;
-		border-top: 7px solid $accentcolor;
-		margin-top: 259px;
+		border-bottom: 7px solid $accenttwo;
+		border-top: 7px solid $accenttwo;
+		margin-top: 249px;
 		padding-bottom: 60px;
 	}
 
@@ -205,7 +209,7 @@ p {
 	}
 
 article {
-	border-bottom: 5px solid $accentcolor;
+	border-bottom: 5px solid $accenttwo;
 	padding-bottom: 60px;
 
 	// h2 {

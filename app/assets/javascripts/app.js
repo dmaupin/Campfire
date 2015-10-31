@@ -13,12 +13,22 @@ function add_fields(link, association, content) {
   $(link).parent().before(content.replace(regexp, new_id));
 }
 
-// scroll-to
+// scroll-to first recipe
 
 $(document).ready(function() {
   $("#home").click(function() {
     $('html, body').animate({
         scrollTop: $("#top").offset().top-38
+    }, 1000);
+  });
+});
+
+// scroll-to info
+
+$(document).ready(function() {
+  $("#infobtn").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#info").offset().top-279
     }, 1000);
   });
 });
