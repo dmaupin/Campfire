@@ -8,14 +8,15 @@ body {
 	font-size: 100%;
 	padding: 30px;
 	max-width: 1280px;
-	background-color: #EBEDE7;
+	background-color: #DFE8DF;
 	margin: 0 auto;
 }
 
 // color varibales
 
-$maincolor: #475531;
-$accentcolor: #414042;
+$maincolor: #4D5147;
+$accentcolor: #666A65;
+$accenttwo: #ffffff;
 
 // Fonts
 @font-face {
@@ -87,7 +88,8 @@ h2 {
 
 h3 {
 	font-family: $fontl;
-	color: $maincolor;
+	font-size: 1em;
+	color: $accentcolor;
 }
 
 p {
@@ -129,16 +131,19 @@ p {
 
 		.navlinks {
 			font-family: $fontxl;
-			border-top: 5px solid $accentcolor;
-    	padding-top: 17px;
-    	margin-top: 30px;
+			border-top: 7px solid $accenttwo;
+    	padding-top: 20px;
+    	margin-top: 20px;
 		}
 
 		a {
 			appearance: none;
 			text-decoration: none;
 			color: $accentcolor;
-			font-size: 1.5em;
+	    font-size: 1.2em;
+	    text-transform: uppercase;
+	    letter-spacing: 1px;
+
 		}
 
 		.new {
@@ -161,14 +166,14 @@ p {
 	.recipes {
 		@include outer-container();
 		@include span-columns(9);
-		padding-left: 30px;
+		// padding-left: 30px;
 		overflow: scroll;
 		margin-left: 210px;
 		max-width: 800px;
 
 		h2 {
 			line-height: 0.9;
-			margin-bottom: 0px;
+			margin-bottom: 9px;
 		}
 
 		span {
@@ -177,14 +182,34 @@ p {
 	}
 
 	.intro {
-		border-bottom: 5px solid $accentcolor;
-		border-top: 5px solid $accentcolor;
-		margin-top: 238px;
+		border-bottom: 7px solid $accenttwo;
+		border-top: 7px solid $accenttwo;
+		margin-top: 249px;
 		padding-bottom: 60px;
 	}
 
+	.footer {
+		@include outer-container();
+		@include span-columns(9);
+		width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 60px solid $accentcolor;
+
+    span {
+    	float: left;
+    }
+
+   	a {
+			appearance: none;
+			text-decoration: none;
+			color: $accentcolor;
+			cursor: pointer;
+		}
+	}
+
 article {
-	border-bottom: 5px solid $accentcolor;
+	border-bottom: 5px solid $accenttwo;
 	padding-bottom: 60px;
 
 	// h2 {

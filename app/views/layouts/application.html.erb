@@ -5,14 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 </head>
 <body>
 <img src="<%= asset_path('grain.jpg') %>" class="grain">
 <div class="header">
-	<img src="<%= asset_path('Campfire_Logo_1a.svg') %>" alt="Campfire Cookery" class="logo">
+	<img src="<%= asset_path('Campfire_Logo_3a.svg') %>" alt="Campfire Cookery" class="logo">
 	<div class="navlinks">
-		<a href="/">Home</a>
-		<span><a href="/">Info</a></span>
+		<a id="home">Top</a>
+		<span><a id="infobtn">Info</a></span>
 		<% if current_user %>
 		<br/>
 		<a><%= link_to "New", new_recipe_path, class: 'new' %></a>
