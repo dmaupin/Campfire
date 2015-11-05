@@ -166,7 +166,7 @@ p {
 	.recipes {
 		@include outer-container();
 		@include span-columns(9);
-		padding-left: 30px;
+		// padding-left: 30px;
 		overflow: scroll;
 		margin-left: 210px;
 		max-width: 800px;
