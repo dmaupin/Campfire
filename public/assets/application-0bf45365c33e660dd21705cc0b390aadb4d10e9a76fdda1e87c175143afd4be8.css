@@ -1,0 +1,275 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ */
+/* line 4, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/* line 7, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+body {
+  font-size: 100%;
+  padding: 30px;
+  max-width: 1280px;
+  background-color: #DFE8DF;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Odudo-Light';
+  src: url("odudo-light.eot");
+  src: url("odudo-light.eot?#iefix") format("embedded-opentype"), url("odudo-light.woff2") format("woff2"), url("odudo-light.woff") format("woff"), url("odudo-light.ttf") format("truetype"), url("odudo-light.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Odudo-Regular';
+  src: url("odudo.eot");
+  src: url("odudo.eot?#iefix") format("embedded-opentype"), url("odudo.woff2") format("woff2"), url("odudo.woff") format("woff"), url("odudo.ttf") format("truetype"), url("odudo.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Odudo-SemiBold';
+  src: url("odudo-semi-bold.eot");
+  src: url("odudo-semi-bold.eot?#iefix") format("embedded-opentype"), url("odudo-semi-bold.woff2") format("woff2"), url("odudo-semi-bold.woff") format("woff"), url("odudo-semi-bold.ttf") format("truetype"), url("odudo-semi-bold.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Odudo-Bold';
+  src: url("odudo-bold.eot");
+  src: url("odudo-bold.eot?#iefix") format("embedded-opentype"), url("odudo-bold.woff2") format("woff2"), url("odudo-bold.woff") format("woff"), url("odudo-bold.ttf") format("truetype"), url("odudo-bold.svg#youworkforthem") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 79, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+h1 {
+  font-family: "Odudo-Bold";
+}
+
+/* line 83, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+h2 {
+  font-family: "Odudo-Bold";
+  color: #4D5147;
+  font-size: 4.5em;
+}
+
+/* line 89, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+h3 {
+  font-family: "Odudo-SemiBold";
+  font-size: 1em;
+  color: #666A65;
+}
+
+/* line 95, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+p {
+  font-family: "Odudo-Light";
+  color: #666A65;
+}
+
+/* line 102, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.grain {
+  background: url(noise.jpg);
+  background-repeat: repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  opacity: 0.1;
+  pointer-events: none;
+  position: fixed;
+}
+
+/* line 120, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  height: 100%;
+  position: fixed;
+  max-width: 180px;
+  min-width: 180px;
+}
+/* line 20, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 89, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.header:last-child {
+  margin-right: 0;
+}
+/* line 128, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.header .logo {
+  width: 100%;
+}
+/* line 132, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.header .navlinks {
+  font-family: "Odudo-Bold";
+  border-top: 7px solid #ffffff;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+/* line 139, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.header a {
+  appearance: none;
+  text-decoration: none;
+  color: #666A65;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+/* line 149, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.header .new {
+  color: #4D5147;
+}
+/* line 153, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.header span {
+  float: right;
+}
+/* line 157, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.header p {
+  font-size: .5em;
+  bottom: 15px;
+  position: fixed;
+}
+
+/* line 166, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.recipes {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  overflow: scroll;
+  margin-left: 210px;
+  max-width: 800px;
+}
+/* line 20, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.recipes::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 89, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.recipes:last-child {
+  margin-right: 0;
+}
+/* line 174, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.recipes h2 {
+  line-height: 0.9;
+  margin-bottom: 9px;
+}
+/* line 179, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.recipes span {
+  font-family: "Odudo-Regular";
+}
+
+/* line 184, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.intro {
+  border-bottom: 7px solid #ffffff;
+  border-top: 7px solid #ffffff;
+  margin-top: 249px;
+  padding-bottom: 60px;
+}
+
+/* line 191, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.footer {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 60px solid #666A65;
+}
+/* line 20, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.footer::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 89, /usr/local/Cellar/rbenv/0.4.0/versions/2.2.1/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+.footer:last-child {
+  margin-right: 0;
+}
+/* line 199, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.footer span {
+  float: left;
+}
+/* line 203, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.footer a {
+  appearance: none;
+  text-decoration: none;
+  color: #666A65;
+  cursor: pointer;
+}
+
+/* line 211, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+article {
+  border-bottom: 5px solid #ffffff;
+  padding-bottom: 60px;
+}
+
+/* line 220, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+form {
+  margin-left: 210px;
+  font-family: "Odudo-Regular";
+  margin-top: 238px;
+  padding-left: 30px;
+}
+
+/* line 227, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Odudo-Regular";
+  color: #666A65;
+}
+
+/* line 235, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.bug {
+  max-width: 40px;
+}
+
+/* line 239, /Users/Herschel/Dev/foodblog/campfire/campfire/app/assets/stylesheets/recipes.scss */
+.adminlinks a {
+  appearance: none;
+  text-decoration: none;
+  font-family: "Odudo-SemiBold";
+  color: #4D5147;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
