@@ -4,7 +4,7 @@ class RecipesController < ApplicationController
 	# http_basic_authenticate_with name: "admin", password: "foobar", except: :index
 
 	def index
-		@recipes = Recipe.all
+		@recipes = Recipe.all.order(created_at: :asc)
 	end
 
 	def show
