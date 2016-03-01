@@ -1,17 +1,14 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple rails blog. Featuring recipes from my camping excursions.
 
-Things you may want to cover:
+Built with:
 
-* Ruby version
+* Ruby on Rails
 
-* System dependencies
+* Postgresql
 
-* Configuration
-
-* Database creation
+* Paperclip
 
 * Database initialization
 
