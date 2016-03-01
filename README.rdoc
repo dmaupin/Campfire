@@ -12,4 +12,4 @@ Built with:
 
 * Bourbon / Neat
 
-<a href="www.campfire.kitchen" taget="blank">campfire.kitchen</href>
+campfire.kitchen[www.campfire.kitchen]
