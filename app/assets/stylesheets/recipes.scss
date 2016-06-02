@@ -10,6 +10,7 @@ body {
 	max-width: 1280px;
 	background-color: #DFE8DF;
 	margin: 0 auto;
+	transition: all 0.25s ease;
 }
 
 // color varibales
@@ -97,11 +98,15 @@ p {
 	color: $accentcolor;
 }
 
+// Breakpoints
+
+$break: new-breakpoint(max-width 600px);
+
 // Grain Overlay
 
 .grain {
 	background: url(noise.jpg);
-  background-repeat: repeat;
+	background-repeat: repeat;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -124,9 +129,21 @@ p {
 		position: fixed;
 		max-width: 180px;
 		min-width: 180px;
+		transition: all 0.25s ease;
+
+		@include media($break) {
+			max-width: 100%;
+			@include span-columns(12);
+			position: inherit;
+		}
 
 		.logo {
 			width: 100%;
+
+			@include media($break) {
+				width: 40%;
+				margin-left: 30%;
+			}
 		}
 
 		.navlinks {
@@ -171,6 +188,11 @@ p {
 		margin-left: 210px;
 		max-width: 800px;
 
+		@include media($break) {
+			@include span-columns(12);
+			margin-left: 0px;
+		}
+
 		h2 {
 			line-height: 0.9;
 			margin-bottom: 9px;
@@ -186,6 +208,11 @@ p {
 		border-top: 7px solid $accenttwo;
 		margin-top: 249px;
 		padding-bottom: 60px;
+
+		@include media($break) {
+			border-top: none;
+			margin-top: 0px;
+		}
 	}
 
 	.footer {
